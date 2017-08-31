@@ -1,0 +1,14 @@
+<% include ../partials/boilerplate %>
+  <div class="planetform">
+    <h2><%= planet.pname %></h2>
+    <p>population:  <%= planet.population %> </p>
+    <p>climate:  <%= planet.climate %> </p>
+    <p>terrain:  <%= planet.terrain %> </p>
+    <p>control:  <%= planet.control %> </p>
+    <a href="/planet" class='displayadd'>Back to Main</a><br>
+    <a href="/planet/<%=planet.id%>/edit" class='displayadd'>Update Planet</a>
+    <form class="delete" action="/planet/<%=planet.id%>?_method=DELETE" method="POST">
+  <input type="submit" class='displayadd' value="Destroy Planet"/>
+</form>
+  </div>
+<% include ../partials/end %>

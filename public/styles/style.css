@@ -1,0 +1,32 @@
+
+#links a { font-size: 30px; line-height: 170px; margin: 30px 30px 0 30px;   }
+#locallinks a { font-size: 22px; margin: 20px; }
+#locallinks a, #links a { float: center; }
+#locallinks a:hover, #links a:hover, .displayadd:hover {filter: brightness(50%); }
+#links a, .displayadd, #locallinks a { text-decoration: none; color: gold; text-transform: uppercase; font-weight: 900; }
+
+#back { background-image: url(https://68.media.tumblr.com/6d1cf79bedfb34530eb293b83c9bda1d/tumblr_o348z7lgeL1tl78d1o1_500.gif); background-size: cover; height: 100px; top: 0; left: 0; margin-top: -7px; margin-left: -7px; background-repeat: no-repeat; min-width: 960px; filter:blur(1px); }
+/*http://nerdist.com/wp-content/uploads/2017/05/3.gif*/
+
+#sabrered {
+  margin-left: -7px;
+  min-width: 960px;
+  height: 60px; -webkit-animation-name: redPulse; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite;
+  background: -webkit-linear-gradient(top, rgba(229, 17, 21, 1) 0%, rgba(254, 254, 254, 1) 30%, rgba(254, 254, 254, 1) 0%, rgba(254, 254, 254, 1) 60%, rgba(229, 17, 21, 1) 100%); border-radius: 0 12px 12px 0; box-shadow: 0px 0px 8px 2px rgba(255,56,56,1); text-align: center; } /*https://codepen.io/itsnotchester/pen/wKVOma*/
+
+input { background-color: transparent; font-size: 15px; border: none; color: #BCC6CC; }
+.unitform {width: 220px; min-height: 200px; }
+.planetform { width: 180px; min-height: 150px;  }
+.unitform, .planetform { background: rgba(188,198,204,0.1); float: left; margin: 5px; color: #BCC6CC; text-transform: uppercase; border-radius: 8%; border: ridge gold;  text-align: center; padding-bottom: 15px; }
+.unitform:hover, .planetform:hover { -webkit-animation-name: redPulse; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; }
+.adsform img { border: 3px solid #BCC6CC; width: 300px; height: 300px; -webkit-text-stroke: 1px #BCC6CC; }
+#btitle { color: #BCC6CC; }
+body { background-image: url(back.jpg); min-height: 100%; min-width: 960px; }
+.bottom { position: fixed; bottom: 0; width: 100%; height: 30px; color: #BCC6CC; font-size: 25px; filter: blur(.75px); } /*http://longwallpapers.com/Desktop-Wallpaper/star-wars-empire-wallpaper-high-definition-For-Desktop-Wallpaper.jpg*/
+
+@-webkit-keyframes redPulse {
+  from { box-shadow: 0 0 35px #721102; }
+  50% { box-shadow: 0 0 65px #db2104; }
+  to { box-shadow: 0 0 35px #490b02; }
+}
+

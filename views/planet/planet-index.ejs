@@ -1,0 +1,12 @@
+<% include ../partials/boilerplate %>
+
+<% planet.forEach(planet => { %>
+  <div class="planetform">
+    <h2><%= planet.pname %></h2>
+    <p><%= planet.control %></p>
+    <a href="/planet/<%=planet.id%>" class='displayadd'>Planet Details</a><br>
+    <a href="planet/new" class='displayadd'>Add Planet</a>
+  </div>
+<% }) %>
+
+<% include ../partials/end %>
