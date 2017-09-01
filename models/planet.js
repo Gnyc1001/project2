@@ -16,10 +16,9 @@ planet.create = (planet) => {
   return db.one(`
     INSERT INTO planet
     (pname, population, climate, terrain, control)
-    VALUES ($1, $2, $3, $4, $5)
-    RETURNING *
+    VALUES ($1, $2, $3, $4, $5) RETURNING *
   `, [planet.pname, planet.population, planet.climate, planet.terrain, planet.control]);
-}
+  };
 
 planet.update = (planet, id) => {
   return db.one(`

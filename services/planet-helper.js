@@ -2,14 +2,17 @@
 
   function getPlanet(req, res, next) {
     fetch('https://swapi.co/api/planets/?page=1&format=json')
-      .then(fetchRes => {
+      .then(fetchRes => { console.log('getPlanet');
       return fetchRes.json();
+
     }).then(jsonFetchRes => {
-        //for(i = 0; i < results.length; i++);
-      res.locals.pname = jsonFetchRes.results[0].name;
-      res.locals.population = jsonFetchRes.results[0].population;
-      res.locals.climate = jsonFetchRes.results[0].climate;
-      res.locals.terrain = jsonFetchRes.results[0].terrain;
+      for(i = 0; i < jsonFetchRes.results.length; i++){
+      res.locals.pname = jsonFetchRes.results[i].name;
+      res.locals.population = jsonFetchRes.results[i].population;
+      res.locals.climate = jsonFetchRes.results[i].climate;
+      res.locals.terrain = jsonFetchRes.results[i].terrain;
+      res.locals.control = 'undefined';
+     }
       next();
     }).catch((err) => {
       console.log(err);
@@ -21,4 +24,4 @@
     });
   }
 
-  module.exports = { getPlanet :getPlanet }
+  module.exports = { getPlanet : getPlanet }

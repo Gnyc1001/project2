@@ -1,17 +1,11 @@
 const planet = require('../models/planet');
-//const ads = require('../models/ads');
 const planetController = {};
 
   planetController.index = (req, res) => {
-  planet.findAll()
+    planet.findAll(req.paramas.id)
     .then(planet => {
-      res.render('planet/planet-index',
-        { planet: res.locals.pname,
-          planet: res.locals.population,
-          planet: res.locals.climate,
-          planet: res.locals.terrain,
-       });
-    })
+      res.render('planet/planet-index', {planet: planet });
+      })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -30,22 +24,23 @@ const planetController = {};
     }
 
   planetController.create = (req, res) => {
-  planet.create({
-    pname: req.body.pname,
-    population: req.body.population,
-    climate: req.body.climate,
-    terrain: req.body.terrain,
-    control: req.body.control,
+    planet.create({
+      pname: res.locals.pname,
+      population: res.locals.population,
+      climate: res.locals.climate,
+      terrain: res.locals.terrain,
+      })
+      .then(planet => {
+        res.json({
+          message: 'planet created successfully',
+          planet: planet,
+      })
     })
-    .then(planet => {
-    res.redirect(`/planet/${planet.id}`);
-    })
-    .catch(err => {
-    console.log(err);
-    res.status(501).json(err);
-  });
-}
-
+      .catch(err => {
+      console.log(err);
+        res.status(501).json(err);
+    });
+  };
 
   planetController.edit = ( req, res ) => {
     planet.findById(req.params.id)
@@ -56,24 +51,24 @@ const planetController = {};
         console.log(err);
         res.status(500).json(err);
       });
-  }
+    }
 
   planetController.update = ( req, res ) => {
-  planet.update({
-    pname: req.body.pname,
-    population: req.body.population,
-    climate: req.body.climate,
-    terrain: req.body.terrain,
-    control: req.body.control,
-  }, req.params.id)
-  .then(planet => {
-    res.redirect(`/planet/${planet.id}`);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(502).json(err);
-  });
-};
+    planet.update({
+      pname: req.body.pname,
+      population: req.body.population,
+      climate: req.body.climate,
+      terrain: req.body.terrain,
+      control: req.body.control,
+    }, req.params.id)
+    .then(planet => {
+        res.redirect(`/planet/${planet.id}`);
+    })
+    .catch(err => {
+      console.log(err);
+        res.status(502).json(err);
+    });
+  };
 
   planetController.delete = (req, res) => {
   planet.destroy(req.params.id)
@@ -85,16 +80,16 @@ const planetController = {};
       });
     }
 
-//ads
-  //     planetController.index = (req, res) => {
-  // ads.findAll()
-  //   .then(ads => {
-  //     res.render('planet/planet-index', { ads: ads });
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //     res.status(500).json(err);
-  //   });
-  // };
+// ads
+//       planetController.index = (req, res) => {
+//   ads.findAll()
+//     .then(ads => {
+//       res.render('planet/planet-index', { ads: ads });
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+//   };
 
 module.exports = planetController;
