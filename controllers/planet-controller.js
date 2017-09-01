@@ -5,7 +5,12 @@ const planetController = {};
   planetController.index = (req, res) => {
   planet.findAll()
     .then(planet => {
-      res.render('planet/planet-index', { planet: planet });
+      res.render('planet/planet-index',
+        { planet: res.locals.pname,
+          planet: res.locals.population,
+          planet: res.locals.climate,
+          planet: res.locals.terrain,
+       });
     })
     .catch(err => {
       console.log(err);
@@ -22,8 +27,7 @@ const planetController = {};
         console.log(err);
         res.status(500).json(err);
       });
-  }
-
+    }
 
   planetController.create = (req, res) => {
   planet.create({
@@ -80,7 +84,6 @@ const planetController = {};
       res.status(400).json(err);
       });
     }
-
 
 //ads
   //     planetController.index = (req, res) => {

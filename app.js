@@ -17,7 +17,8 @@ const app = express();
   require('dotenv').config();
 
 //middleware used
-app.use(logger('dev')); //logs events
+//logs events
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 //determines direction
@@ -32,9 +33,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 //connecting to public files
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 //ejs engine
 app.set('view engine', 'ejs');
 //connecting with views files
