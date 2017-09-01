@@ -1,8 +1,8 @@
-require('isomorphic-fetch')
+  require('isomorphic-fetch')
 
-function getPlanet(req, res, next) {
-  fetch('https://swapi.co/api/planets/?page=1&format=json')
-    .then(fetchRes => {
+  function getPlanet(req, res, next) {
+    fetch('https://swapi.co/api/planets/?page=1&format=json')
+      .then(fetchRes => {
       return fetchRes.json();
     }).then(jsonFetchRes => {
         //for(i = 0; i < results.length; i++);
