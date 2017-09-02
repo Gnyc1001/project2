@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+
+<form action="/empire/<%= empire.id %>?_method=PUT" method="POST" class="unitform">
+  <input type="text" name="name" value="<%= empire.name %>" placeholder="name"/>
+  <input type="text" name="model" value="<%= empire.model %>" placeholder="model"/>
+  <input type="text" name="maker" value="<%= empire.maker %>" placeholder="maker"/>
+  <input type="number" name="cost" value="<%= empire.cost %>" placeholder="credit cost"/>
+  <input type="number" name="crew" value="<%= empire.crew %>" placeholder="crew"/>
+ <input type="text" name="station" value="<%= empire.station %>" placeholder="station"/>
+  <input type="submit" value="Update your unit" />
+</form>
+<a href="/empire/<%=empire.id%>" class='displayadd'>Cancel Changes</a><br>
+<a href="/empire/" class='displayadd'>Back to Main</a>
+
+<% include ../partials/end %>

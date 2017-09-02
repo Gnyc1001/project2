@@ -1,0 +1,9 @@
+<% include ../partials/boilerplate %>
+
+<% ads.forEach(ads => { %>
+  <div class="adsform">
+    <a href="/ads/<%=ads.id%>"></a>
+  </div>
+<% }) %>
+
+<% include ../partials/end %>

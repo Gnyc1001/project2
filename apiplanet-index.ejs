@@ -1,0 +1,20 @@
+<% include ../partials/boilerplate %>
+
+<form id="pageNo">
+<input class="displayadd" type="text" pattern="[0-9]{1}" placeholder= "enter page number"/>
+    <input type="submit" id="submit"/>
+    </form>
+
+<% data.forEach(locals => { %>
+  <div class="planetform">
+    <h2><%= locals.name %></h2>
+    <a href="planet/" class='displayadd'>Add to Database</a>
+    <p>population: <%= locals.population %></p>
+    <p>climate: <%= locals.climate %></p>
+    <p>terrain: <%= locals.terrain %></p>
+    <p>control: <%= 'unavailable' %></p>
+
+  </div><% }) %>
+
+
+<% include ../partials/end %>

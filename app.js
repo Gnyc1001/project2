@@ -9,8 +9,8 @@ const session = require('express-session');
 const passport = require('passport');
 
 //add-ons
-//const quotes = require('starwars'); //https://www.npmjs.com/package/starwars
-//const sql = require('sql'); //https://www.npmjs.com/package/sql
+const starwars = require('starwars');
+const starwarsquotes = require('star-wars-quotes');
 
 //init express
 const app = express();
@@ -57,11 +57,16 @@ app.use('/empire', empireRoutes);
 const planetRoutes = require('./routes/planet-routes');
 app.use('/planet', planetRoutes);
 
-// const empireDashRoutes = require('./routes/empire-routes');
-// app.use('/dashboard', empireDashRoutes);
 
-// const planetDashRoutes = require('./routes/planet-routes');
-// app.use('/dashboard', planetDashRoutes);
+//API routes
+const apiempireRoutes = require('./routes/apiempire-routes');
+app.use('/apiempire', apiempireRoutes);
+
+const apiplanetRoutes = require('./routes/apiplanet-routes');
+app.use('/apiplanet', apiplanetRoutes);
+
+
+
 
 const adsRoutes = require('./routes/ads-routes');
 app.use('/dashboard', adsRoutes);

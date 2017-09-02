@@ -1,0 +1,21 @@
+<% include ../partials/boilerplate %>
+
+<form id="pageNo">
+    <input class="displayadd" type="text" pattern="[0-9]{1}" placeholder= "enter page number"/>
+    <input type="submit" id="submit"/>
+    </form>
+
+<% unit.forEach(locals => { %>
+  <div class="unitform">
+    <h2><%= locals.name %></h2>
+    <a href="planet/" class='displayadd'>Add to Database</a>
+    <p>model: <br><%= locals.model %></p>
+    <p>maker: <br><%= locals.manufacturer %></p>
+    <p>cost: <%= locals.cost_in_credits %></p>
+    <p>crew: <%= locals.crew %></p>
+    <p>stationed: <br><%= 'unavailable' %></p>
+
+  </div><% }) %>
+
+
+<% include ../partials/end %>

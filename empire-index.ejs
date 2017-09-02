@@ -1,0 +1,11 @@
+<% include ../partials/boilerplate %>
+<% empire.forEach(empire => { %>
+  <div class="unitform">
+    <h2><%= empire.name %></h2>
+    <p>Station: <%= empire.station %></p>
+
+    <a href="/empire/<%=empire.id%>" class='displayadd'>Unit Details</a><br>
+    <a href="empire/add" class='displayadd'>Add Unit</a>
+  </div>
+<% }) %>
+<% include ../partials/end %>
