@@ -16,10 +16,10 @@
 
 input { background-color: transparent; font-size: 15px; border: none; color: #BCC6CC; }
 .unitform {width: 220px; min-height: 200px; }
-.planetform { width: 180px; min-height: 150px;  }
+.planetform { width: 180px; min-height: 220px; display: inline-block; }
 .unitform, .planetform { background: rgba(188,198,204,0.1); float: left; margin: 5px; color: #BCC6CC; text-transform: uppercase; border-radius: 8%; border: ridge gold;  text-align: center; padding-bottom: 15px; }
 .unitform:hover, .planetform:hover { -webkit-animation-name: redPulse; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite; }
-.adsform img { border: 3px solid #BCC6CC; width: 300px; height: 300px; -webkit-text-stroke: 1px #BCC6CC; }
+.adsform img { border: 3px solid #BCC6CC; width: 300px; height: 300px; -webkit-text-stroke: 1px #BCC6CC; display: inline-block; }
 #btitle { color: #BCC6CC; }
 body { background-image: url(back.jpg); min-height: 100%; min-width: 960px; }
 .bottom { position: fixed; bottom: 0; width: 100%; height: 30px; color: #BCC6CC; font-size: 25px; filter: blur(.75px); } /*http://longwallpapers.com/Desktop-Wallpaper/star-wars-empire-wallpaper-high-definition-For-Desktop-Wallpaper.jpg*/

@@ -1,13 +1,15 @@
 <% include ../partials/boilerplate %>
+<% console.log(data); %>
 
-<% { %>
+<% data.forEach(locals => { %>
   <div class="planetform">
-    <h2><%= locals.pname %></h2>
+    <h2><%= locals.name %></h2>
     <p><%= locals.population %></p>
     <p><%= locals.climate %></p>
     <p><%= locals.terrain %></p>
     <p><%= locals.control %></p>
-  </div> <% } %>
+    <a href="planet/" class='displayadd'>Add to Database</a>
+  </div><% }) %>
 
 
 <% include ../partials/end %>

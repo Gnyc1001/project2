@@ -6,10 +6,10 @@ const planetHelper = require(`../services/planet-helper`);
 planetRouter.get('/', planetHelper.getPlanet, (req, res) => {
   res.render('planet/apiplanet-index');
 });
-//planetRouter.get('/:id/edit', planetController.edit);
-// planetRouter.get('/new', (req, res) => {
-//   res.render('planet/planet-add');
-// });
+planetRouter.get('/:id/edit', planetController.edit);
+planetRouter.get('/new', (req, res) => {
+  res.render('planet/apiplanet-add');
+});
 planetRouter.get('/:id', planetController.show);
 planetRouter.post('/', planetController.create);
 planetRouter.put('/:id', planetController.update);

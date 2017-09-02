@@ -2,9 +2,8 @@ const db = require('../db/config');
 
 const empire = {};
 
-empire.findAll = id => {
-  return db.manyOrNone(`
-    SELECT * FROM empire WHERE userid = $1`, [id]);
+empire.findAll = () => {
+  return db.query(`SELECT * FROM empire`);
 };
 
 empire.findById = (id) => {
