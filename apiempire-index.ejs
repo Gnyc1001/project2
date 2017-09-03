@@ -1,14 +1,16 @@
 <% include ../partials/boilerplate %>
 
-<form id="pageNo">
-    <input class="displayadd" type="text" pattern="[0-9]{1}" placeholder= "enter page number"/>
-    <input type="submit" id="submit"/>
+<form id="epageNo">
+  <div class='displayadd'>Enter page 1 thru 9</div>
+    <input id="empirepage" type="text" pattern="[0-9]{1}" placeholder= "page #"/>
+    <input type="submit" id="empiresubmit"/>
     </form>
+
 
 <% unit.forEach(locals => { %>
   <div class="unitform">
     <h2><%= locals.name %></h2>
-    <a href="planet/" class='displayadd'>Add to Database</a>
+    <a href="empire/add" class='displayadd'>Add to Database</a>
     <p>model: <br><%= locals.model %></p>
     <p>maker: <br><%= locals.manufacturer %></p>
     <p>cost: <%= locals.cost_in_credits %></p>
@@ -17,5 +19,5 @@
 
   </div><% }) %>
 
-
+<script src='../public/script.js'></script>
 <% include ../partials/end %>

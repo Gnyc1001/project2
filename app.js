@@ -57,16 +57,12 @@ app.use('/empire', empireRoutes);
 const planetRoutes = require('./routes/planet-routes');
 app.use('/planet', planetRoutes);
 
-
 //API routes
 const apiempireRoutes = require('./routes/apiempire-routes');
 app.use('/apiempire', apiempireRoutes);
 
 const apiplanetRoutes = require('./routes/apiplanet-routes');
 app.use('/apiplanet', apiplanetRoutes);
-
-
-
 
 const adsRoutes = require('./routes/ads-routes');
 app.use('/dashboard', adsRoutes);

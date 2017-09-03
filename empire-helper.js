@@ -10,7 +10,6 @@
         res.locals.unit = jsonFetchRes.results;
       next();
 
-
     }).catch((err) => {
       console.log(err);
       res.locals.pname = 'new unit coming soon'

@@ -1,4 +1,5 @@
-  require('isomorphic-fetch')
+  require('isomorphic-fetch');
+
 
   function getPlanet(req, res, next) {
 
@@ -9,7 +10,6 @@
     }).then(jsonFetchRes => {
         res.locals.data = jsonFetchRes.results;
       next();
-
 
     }).catch((err) => {
       console.log(err);

@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard</title>
-  <link rel='stylesheet' type='text/css' href='/styles/reset.css'>
-  <link rel='stylesheet' type='text/css' href='/styles/style.css'>
-</head>
-<body>
-Test
-<% include ..views/ads/ads-index%>
-</body>
-</html>
+<% include ../partials/boilerplate %>
+
+<form id="epageNo">
+  <div class='displayadd'>Enter page 1 thru 9</div>
+    <input id="empirepage" type="text" pattern="[0-9]{1}" placeholder= "page #"/>
+    <input type="submit" id="empiresubmit"/>
+    </form>
+
+<% include ../partials/end %>
