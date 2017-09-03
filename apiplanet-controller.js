@@ -9,8 +9,8 @@ apiplanetController.index = (req, res) => {
 
 apiplanetController.sendApiPlanet = (req, res) => {
   res.json({
-    message: `Weather for ${req.params.ppage}`,
-    planet: res.locals.weatherData,
+    message: `planet for ${req.params.ppage}`,
+    planet: res.locals.planetData,
   })
 }
 

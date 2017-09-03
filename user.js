@@ -12,6 +12,12 @@ User.findbyUserEmpire = id => {
     SELECT * FROM empire WHERE userid = $1`, [id]);
 };
 
+User.findbyUserPlanet = id => {
+  return db.manyOrNone(`
+    SELECT * FROM planet WHERE userid = $1`, [id]);
+};
+
+
 
 User.create = user => {
   return db.one(`

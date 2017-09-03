@@ -1,4 +1,6 @@
 const planet = require('../models/planet');
+const user = require('../models/user');
+
 const planetController = {};
 
   planetController.index = (req, res) => {
