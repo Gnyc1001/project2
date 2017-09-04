@@ -1,9 +1,9 @@
 <% include ../partials/boilerplate %>
 
-<form id="epageNo">
-  <div class='displayadd'>Enter page 1 thru 9</div>
-    <input id="empirepage" type="text" pattern="[0-9]{1}" placeholder= "page #"/>
-    <input type="submit" id="empiresubmit"/>
-    </form>
+<% ads.forEach(ads => { %>
+  <div class="adsform">
+    <a href="/ads/<%=ads.id%>"></a>
+  </div>
+<% }) %>
 
 <% include ../partials/end %>

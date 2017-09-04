@@ -4,7 +4,7 @@ const adsController = {};
   adsController.index = (req, res) => {
   ads.findAll()
     .then(ads => {
-      res.render('ads/ads-index', { ads: ads });
+      res.render('dashboard/dashboard', { ads: ads });
     })
     .catch(err => {
       console.log(err);
