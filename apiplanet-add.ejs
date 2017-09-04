@@ -1,0 +1,13 @@
+<% include ../partials/boilerplate %>
+
+<form method="POST" action="/planet/" class="planetform">
+  <input type="text" name="pname" <%= locals.pname %> />
+  <input type="number" name="population" <%= locals.population %> />
+  <input type="text" name="climate" <%= locals.climate %> />
+  <input type="text" name="terrain" <%= locals.terrain %> />
+  <input type="text" name="control" <%= locals.control %> />
+  <input type="submit" class='displayadd' value="Add Planet" /><br>
+  <a href="/planet/" class='displayadd'>Cancel Planet</a>
+</form>
+
+<% include ../partials/end %>

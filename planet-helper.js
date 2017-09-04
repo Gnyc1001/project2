@@ -2,7 +2,7 @@
 
 
   function getPlanet(req, res, next) {
-
+    // for(let i = 1; i = 7; i++){
     fetch('https://swapi.co/api/planets/?page=1&format=json')
       .then(fetchRes => {
       return fetchRes.json();
