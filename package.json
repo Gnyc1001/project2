@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,9 @@
     "morgan": "^1.8.2",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pg-promise": "^6.5.1"
+    "pg-promise": "^6.5.1",
+    "star-wars-quotes": "^1.0.2",
+    "starwars": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
