@@ -1,6 +1,6 @@
-CREATE DATABASE empire_db;
+--CREATE DATABASE empire_db;
 
-\c empire_db;
+--\c empire_db;
 
 CREATE TABLE IF NOT EXISTS empire (
   id SERIAL PRIMARY KEY,
