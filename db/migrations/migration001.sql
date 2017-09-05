@@ -1,6 +1,6 @@
---CREATE DATABASE empire_db;
+CREATE DATABASE empire_db;
 
---\c empire_db;
+\c empire_db;
 
 CREATE TABLE IF NOT EXISTS empire (
   id SERIAL PRIMARY KEY,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS planet (
   id SERIAL PRIMARY KEY,
-  pname VARCHAR(50),
+  pname text,
   population VARCHAR(1024),
   climate text,
   terrain text,

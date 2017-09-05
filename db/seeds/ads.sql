@@ -1,4 +1,4 @@
---\c empire_db;
+\c empire_db;
 
 INSERT INTO ads (name, picture ) VALUES
 ('darthshoes','https://universaldork.files.wordpress.com/2015/12/1982-star-wars-stride-rite-advertising-poster.jpg?w=830'),
