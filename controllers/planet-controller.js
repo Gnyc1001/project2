@@ -27,17 +27,14 @@ const planetController = {};
 
   planetController.create = (req, res) => {
     planet.create({
-      pname: res.locals.pname,
-      population: res.locals.population,
-      climate: res.locals.climate,
-      terrain: res.locals.terrain,
+      pname: req.body.pname,
+      population: req.body.population,
+      climate: req.body.climate,
+      terrain: req.body.terrain,
       })
       .then(planet => {
-        res.json({
-          message: 'planet created successfully',
-          planet: planet,
+        res.redirect(`/planet/`);
       })
-    })
       .catch(err => {
       console.log(err);
         res.status(501).json(err);
