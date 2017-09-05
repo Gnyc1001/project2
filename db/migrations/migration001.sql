@@ -21,11 +21,11 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS planet (
   id SERIAL PRIMARY KEY,
-  pname VARCHAR(50) NOT NULL,
-  population VARCHAR(1024) NOT NULL,
+  pname VARCHAR(50),
+  population VARCHAR(1024),
   climate text,
   terrain text,
-  control VARCHAR(50) NOT NULL
+  control VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS ads (
