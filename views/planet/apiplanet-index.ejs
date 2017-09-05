@@ -1,15 +1,22 @@
 <% include ../partials/boilerplate %>
-<% console.log(data); %>
+
+<!-- <form id="ppageNo">
+  <div class='displayadd'>Enter page 1 thru 9</div>
+    <input id="planetpage" type="text" pattern="[0-9]{1}" placeholder= "Planet Page #"/>
+    <input type="submit" id="planetsubmit"/>
+    </form> -->
+
 
 <% data.forEach(locals => { %>
   <div class="planetform">
     <h2><%= locals.name %></h2>
-    <p><%= locals.population %></p>
-    <p><%= locals.climate %></p>
-    <p><%= locals.terrain %></p>
-    <p><%= locals.control %></p>
-    <a href="planet/" class='displayadd'>Add to Database</a>
+    <a href="planet/new" class='displayadd'>Add to Database</a>
+    <p>population: <%= locals.population %></p>
+    <p>climate: <%= locals.climate %></p>
+    <p>terrain: <%= locals.terrain %></p>
+    <p>control: <%= 'unavailable' %></p>
+
   </div><% }) %>
 
-
+<!-- <script src='../public/script.js'></script> -->
 <% include ../partials/end %>

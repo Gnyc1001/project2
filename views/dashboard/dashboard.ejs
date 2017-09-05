@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard</title>
-  <link rel='stylesheet' type='text/css' href='/styles/reset.css'>
-  <link rel='stylesheet' type='text/css' href='/styles/style.css'>
-</head>
-<body>
-Test
-<% include ..views/ads/ads-index%>
-</body>
-</html>
+<% include ../partials/boilerplate %>
+
+<% ads.forEach(ads => { %>
+  <div class="adsform">
+    <a href="/ads/<%=ads.id%>"></a>
+  </div>
+<% }) %>
+
+<% include ../partials/end %>

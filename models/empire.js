@@ -3,7 +3,7 @@ const db = require('../db/config');
 const empire = {};
 
 empire.findAll = () => {
-  return db.query(`SELECT * FROM empire`);
+  return db.query('SELECT * FROM empire');
 };
 
 empire.findById = (id) => {
