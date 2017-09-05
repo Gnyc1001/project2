@@ -1,8 +1,10 @@
 const planet = require('../models/planet');
+const user = require('../models/user');
+
 const planetController = {};
 
   planetController.index = (req, res) => {
-    planet.findAll(req.paramas.id)
+    planet.findAll()
     .then(planet => {
       res.render('planet/planet-index', {planet: planet });
       })
